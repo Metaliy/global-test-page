@@ -1,0 +1,13 @@
+.page-main {
+  @include flex(column);
+}
+
+@media (min-width: $desktop-width) {
+  .page-main{
+    @include flex(row);
+    max-width: 1131px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}

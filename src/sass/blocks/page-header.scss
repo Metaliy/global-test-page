@@ -1,0 +1,163 @@
+//====================================== Main styles ======================================
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin: 10px auto 10px auto;
+  justify-content: space-between;
+  max-width: 678px;
+}
+
+// ====================================== Logo styles ======================================
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  color: #48B774;
+}
+
+.page-header__logo-img {
+  margin-right: 8px;
+}
+
+.page-header__logo-text {
+  width: 83px;
+  height: 38px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-style: normal;
+  color: #2D2D2D;
+}
+
+// ====================================== Sign up button styles ======================================
+
+.page-header__sign-up-button {
+  @include button(108px);
+  margin-right: 8px;
+}
+
+// ====================================== Main nav styles ======================================
+
+.page-header__nav-list {
+  position: absolute;
+  left: 50%;
+  transform:  translateX(-50%);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fff;
+  color: #4A4A4A;
+  width: 120%;
+  top: -250px;
+  transition: top 0.3s ease-in-out;
+}
+
+.page-header__nav-list-item {
+  position: relative;
+  height: 50px;
+  cursor: pointer;
+}
+
+.page-header__nav-list-item:after {
+  opacity: 0;
+  content: "";
+  width: 21px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(150%);
+  height: 2px;
+  background-color: #FB9B69;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-header__nav-list-item:hover::after {
+  
+  opacity: 1;
+}
+
+.page-header__nav-list--open {
+  top: 0px;
+}
+
+
+// *** Toggle styles ***
+
+.main-nav__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
+  margin-right: 8px;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.line-1 {
+  transform: translateY(-5px);
+}
+
+.line-2 {
+  transform: translateY(0px);
+}
+
+.line-3 {
+  transform: translateY(5px);
+}
+
+.main-nav__toggle.open .line-1 {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.main-nav__toggle.open .line-2 {
+  opacity: 0;
+}
+
+.main-nav__toggle.open .line-3 {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    max-width: 1131px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .page-header__nav-list {
+    position: relative;
+    color: #4A4A4A;
+    width: 365px;
+    top: 0px;
+    background-color: #ecf7f3;
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .page-header__nav-list-item {
+    position: relative;
+    height: 24px;
+    cursor: pointer;
+  }
+}

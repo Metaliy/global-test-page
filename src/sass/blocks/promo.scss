@@ -1,0 +1,146 @@
+.promo {
+  margin: 35px auto 40px auto;
+  color: #2D2D2D;
+  min-width: 300px;
+  margin-bottom: 0;
+}
+
+.promo__head {
+font-size: 28px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.promo__head-row {
+  display: block;
+}
+
+.promo__head--orange-text {
+  color: #FF8345;
+}
+
+.promo__description {
+  color: #7C7C7C;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 0px;
+  width: 90%;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+
+}
+
+.promo__start-button {
+  @include button(108px);
+  margin-top: 22px;
+}
+
+.promo__input-container {
+  margin-top: 50px;
+  position: relative;
+  max-width: 597px;
+  width: 90%;
+  box-shadow: 0px 20px 30px rgba(222, 222, 222, 0.25);
+  border-radius: 100px;
+  background: #FFFFFF;
+  padding: 21px 0 22px 21px;
+}
+
+.promo__input { 
+  box-sizing:content-box;
+  color: #A1A1A1;
+  width: 77%;
+  height: 20px;
+  font-size: 16px;
+  max-width: 597px;
+  border: none;
+}
+
+.promo__input-search-button {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  @include button(55px, $leaf, $leaf-hover);
+  border-radius: 50%;
+}
+
+.promo__user-info {
+  margin-top: 40px;
+}
+
+.promo__user-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 26%;
+}
+
+.promo__user-list-item {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.promo__user-list-item:not(:first-child) {
+  margin-left: -17px;
+}
+
+.promo__user-list-item:last-child {
+  box-sizing: border-box;
+  background-color: #FF8345;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+}
+
+.promo__user-text {
+  margin-top: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #707070;
+  width: 259px;
+}
+
+.promo__user-text-link{ 
+  color: #FD905A
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .promo {
+    margin-top: 121px
+  }
+  
+  .promo__head {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65px;
+    }
+
+  .promo__description {
+    max-width: 444px;
+  }
+
+  .promo__user-info {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+}

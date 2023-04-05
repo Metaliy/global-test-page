@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0 5px;
+  min-width: 310px;
+  background-color: #ECF7F3;
+  box-sizing: border-box;
+}
+
+body * {
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+[class*="list"] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
