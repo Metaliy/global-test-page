@@ -2,9 +2,13 @@
 
 .animated-image{
   margin-top: 20px;
+  margin-left: -5px;
+  margin-right: -5px;
   position: relative;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
+  height: 448px;
 }
 
 .animated-image__container {
@@ -190,6 +194,10 @@
 
   .animated-image{
     bottom: 0;
+    overflow-x: visible;
+    height: 448px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .animated-image__circle-orbit{
