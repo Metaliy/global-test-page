@@ -1,4 +1,5 @@
 
+
 .animated-image{
   margin-top: 20px;
   position: relative;
@@ -6,7 +7,7 @@
   justify-content: center;
 }
 
-.container {
+.animated-image__container {
   position: relative;
   width: 300px;
   height: 300px;
@@ -18,7 +19,7 @@
   margin-top: 40px;
 }
 
-.central-circle {
+.animated-image__central-circle {
   position: absolute;
   border-radius: 50%;
   background-color: $leaf;
@@ -32,7 +33,7 @@
   transform: translate(-50%, -50%);
 }
 
-.circle-orbit {
+.animated-image__circle-orbit {
   width: 300px;
   height: 300px;
   position: relative;
@@ -49,7 +50,7 @@
 }
 
 
-.circle-flag-container {
+.animated-image__circle-flag-container {
   position: absolute;
   border-radius: 50%;
   width: 50px;
@@ -58,18 +59,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   animation-name: slide-to-right;
-  animation-duration: 6s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
+  animation-timing-function: linear;
   animation-delay: calc(0.4s * var(--delay));
 }
 
-.circle-flag {
+.animated-image__circle-flag {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border: 10px solid #fff;
+  transform: translate(-50%, -50%) rotate(0deg);
+  border: 10px solid $white;
   border-radius: 50%;
+  animation: spin 12s linear infinite;
 }
 
 .animated-image__woman-image {
@@ -80,28 +83,34 @@
 }
 
 
-.circle-flag-container:nth-child(2) {
+.animated-image__circle-flag-container:nth-child(2) {
   animation-name: slide-to-right-2;
 }
 
-.circle-flag-container:nth-child(3) {
+.animated-image__circle-flag-container:nth-child(3) {
   animation-name: slide-to-right-3;
 }
 
-.circle-flag-container:nth-child(4) {
+.animated-image__circle-flag-container:nth-child(4) {
   animation-name: slide-to-right-4;
 }
 
-.circle-flag-container:nth-child(5) {
+.animated-image__circle-flag-container:nth-child(5) {
   animation-name: slide-to-right-5;
 }
 
-.circle-flag-container:nth-child(6) {
+.animated-image__circle-flag-container:nth-child(6) {
   animation-name: slide-to-right-6;
 }
 
-.circle-flag-container:nth-child(7) {
+.animated-image__circle-flag-container:nth-child(7) {
   animation-name: slide-to-right-7;
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 
@@ -183,11 +192,11 @@
     bottom: 0;
   }
 
-  .circle-orbit{
+  .animated-image__circle-orbit{
     width: 450px;
     height: 450px;
   }
-  .container {
+  .animated-image__container {
     position: relative;
     width: 450px;
     height: 450px;
@@ -198,7 +207,7 @@
     align-items: center; 
     margin-top: 40px;
   }
-  .central-circle {
+  .animated-image__central-circle {
     width: 280px;
     height: 280px;
     top: 60%;

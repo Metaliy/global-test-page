@@ -1,4 +1,3 @@
-//====================================== Main styles ======================================
 
 .page-header {
   display: flex;
@@ -8,11 +7,10 @@
   max-width: 678px;
 }
 
-// ====================================== Logo styles ======================================
 .page-header__logo {
   display: flex;
   align-items: center;
-  color: #48B774;
+  color: $leaf;
 }
 
 .page-header__logo-img {
@@ -28,17 +26,13 @@
   letter-spacing: 0em;
   text-align: left;
   font-style: normal;
-  color: #2D2D2D;
+  color: $dark-gray;
 }
-
-// ====================================== Sign up button styles ======================================
 
 .page-header__sign-up-button {
   @include button(108px);
   margin-right: 8px;
 }
-
-// ====================================== Main nav styles ======================================
 
 .page-header__nav-list {
   position: absolute;
@@ -48,8 +42,8 @@
   font-weight: 400;
   line-height: 50px;
   text-align: center;
-  background-color: #fff;
-  color: #4A4A4A;
+  background-color: $white;
+  color: $gray;
   width: 120%;
   top: -250px;
   transition: top 0.3s ease-in-out;
@@ -83,8 +77,6 @@
   top: -20px;
 }
 
-
-// *** Toggle styles ***
 
 .main-nav__toggle {
   display: flex;
@@ -144,10 +136,10 @@
 
   .page-header__nav-list {
     position: relative;
-    color: #4A4A4A;
+    color: $gray;
     width: 365px;
     top: 0px;
-    background-color: #ecf7f3;
+    background-color: $light-mint;
     display: flex;
     justify-content: space-between;
     height: 24px;
