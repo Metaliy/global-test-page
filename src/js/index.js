@@ -6,6 +6,14 @@ burgerBtn.addEventListener('click', function() {
   pageNav.classList.toggle('page-header__nav-list--open');
 });
 
+document.addEventListener('click', function(event) {
+  const isClickInsideElement = document.querySelector('.page-header').contains(event.target);
+  if (!isClickInsideElement) {
+    burgerBtn.classList.toggle('open');
+    pageNav.classList.toggle('page-header__nav-list--open');
+  }
+});
+
 const userListItems = document.querySelectorAll('.promo__user-list-item');
 
 for (let i = 0; i < userListItems.length; i++) {
@@ -31,3 +39,4 @@ fetch('https://baconipsum.com/api/?type=lucky')
   .then(data => {
     promoDescription.textContent = data[0];
   });
+

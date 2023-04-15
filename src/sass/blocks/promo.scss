@@ -1,8 +1,9 @@
 .promo {
-  margin: 35px auto 40px 0;
+  margin: 35px auto 40px auto;
   color: $dark-gray;
   min-width: 300px;
   margin-bottom: 0;
+  max-width: 678px;
 }
 
 .promo__head {

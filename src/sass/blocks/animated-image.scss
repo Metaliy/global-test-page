@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 448px;
 }
 
@@ -194,7 +194,7 @@
 
   .animated-image{
     bottom: 0;
-    overflow-x: visible;
+    overflow: visible;
     height: 448px;
     margin-left: 0px;
     margin-right: 0px;
